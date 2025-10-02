@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hitung Min, Maks, dan rata-rata</title>
+    </head>
+    <body>
+        <h2>Fungsi Untuk Menghitunng Nilai Minimum, Maksimum, dan Rata-rata</h2>
+
+        <p>Masukkan angka dengan dipisahkan koma (contoh: 10,20,20,40):</p>
+        <input type="text" id="inputArray" placeholder="Masukkan Angka" />
+        <button onclick="hitung()">Hitung</button>
+
+        <h3>Hasil:</h3>
+        <p id="min"></p>
+        <p id="max"></p>
+        <p id="avg"></p>
+
+        <script>
+            function hitung() {
+                //ambil input dan ubah menjadi array angka
+                let input = document.getElementById("inputArray").value;
+                let arr = input.split(",").map(Number);
+
+                if (arr.length === 0 || arr.some(isNaN)) {
+                    alert(
+                        "Harap masukkan angka yang valid, pisahkan dengan koma!"
+                    );
+                    return;
+                }
+
+                let min = Math.min(...arr);
+                let max = Math.max(...arr);
+                let avg = arr.reduce((a, b) => a + b, 0) / arr.length;
+
+                document.getElementById("min").innerText =
+                    "Nilai Minimum: " + min;
+                document.getElementById("max").innerText =
+                    "Nilai Maksimum: " + max;
+                document.getElementById("avg").innerText =
+                    "Nilai Rata-rata: " + avg;
+            }
+        </script>
+    </body>
+</html>

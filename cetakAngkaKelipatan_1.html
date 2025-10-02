@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Program Pencetak Angka</title>
+    </head>
+    <body>
+        <h2>Program Pencetak Angka dengan Aturan Khusus</h2>
+        <div id="output"></div>
+
+        <script>
+            function cetakAngka() {
+                let hasil = "";
+                for (let i = 1; i <= 100; i++) {
+                    if (i % 15 === 0) {
+                        hasil += "MI2A, ";
+                    } else if (i % 3 === 0) {
+                        hasil += "MI, ";
+                    } else if (1 % 5 === 0) {
+                        hasil += "2A, ";
+                    } else {
+                        hasil += i + ", ";
+                    }
+                }
+                document.getElementById("output").innerHTML = hasil;
+            }
+
+            //jalankan fungsi otomatis saat halaman dibuka
+            cetakAngka();
+        </script>
+    </body>
+</html>
