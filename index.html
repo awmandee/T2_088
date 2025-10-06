@@ -1,33 +1,96 @@
-<!DOCTYPE html>
-<html lang="id">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Program Pencetak Angka</title>
-    </head>
-    <body>
-        <h2>Program Pencetak Angka dengan Aturan Khusus</h2>
-        <div id="output"></div>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Tugas M4</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+         }
 
-        <script>
-            function cetakAngka() {
-                let hasil = "";
-                for (let i = 1; i <= 100; i++) {
-                    if (i % 15 === 0) {
-                        hasil += "MI2A, ";
-                    } else if (i % 3 === 0) {
-                        hasil += "MI, ";
-                    } else if (1 % 5 === 0) {
-                        hasil += "2A, ";
-                    } else {
-                        hasil += i + ", ";
-                    }
-                }
-                document.getElementById("output").innerHTML = hasil;
-            }
+         .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 350px;
+         }
 
-            //jalankan fungsi otomatis saat halaman dibuka
-            cetakAngka();
-        </script>
-    </body>
+         h1 {
+            margin-bottom: 15px;
+            color: #333;
+         }
+
+         h3 {
+            margin: 5px 0;
+            font-weight: normal;
+            color: #555;
+         }
+
+         ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+         }
+
+         li {
+            margin: 10px 0;
+         }
+
+         button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #4cafef;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+         }
+
+         button:hover {
+            background: #3798d6;
+            transform: translateY(-2px);
+         }
+
+         button:active {
+            transform: translateY(0);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Tugas M4</h1>
+
+         <h3>Nama : Manda Sulistiawati</h3>
+         <h3>NIM : 0320240088</h3>
+         <h3>Kelas : MI 2B</h3>
+
+         <ul>
+            <li>
+               <button
+                  onclick="window.location.href='T2_088/pencetakAngka1.html'"
+               >
+                  Latihan T1_PencetakAngka
+               </button>
+            </li>
+            <li>
+               <button
+                  onclick="window.location.href='T2_088/Menghitung_nilai_Min_Maks_Rata_2.html'"
+               >
+                  Latihan T2_Menghitung_nilai_Min_Maks_Rata
+               </button>
+            </li>
+         </ul>
+      </div>
+   </body>
 </html>
